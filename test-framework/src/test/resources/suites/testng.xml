@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestVagrant Suite" verbose="2" parallel="methods" thread-count="4" data-provider-thread-count="3">
+    <parameter name="browser" value="CHROME"/>
+    <parameter name="allAssertsScreenshot" value="true"/>
+    <test name="Test Vagrant Assigmnent">
+        <packages>
+            <package name="tests.*"/>
+        </packages>
+    </test>
+</suite>

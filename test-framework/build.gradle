@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group 'org.test-vagrant'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.testng', name: 'testng', version: '7.0.+'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.+'
+    compile 'io.qameta.allure:allure-testng:2.13.+'
+    compile 'io.rest-assured:rest-assured:4.3.+'
+    compile "org.projectlombok:lombok:1.18.12"
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.6'
+
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.+'
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.10.2'
+}
+
+ext {
+    if (!project.hasProperty('testSuite')) {
+        testSuite = 'default.xml'
+    }
+}
+
+test {
+    useTestNG() {
+        systemProperty 'buildTag', project.hasProperty('buildTag') ? project.buildTag : null
+        systemProperty 'buildNumber', project.hasProperty('buildNumber') ? project.buildNumber : null
+        systemProperty 'buildName', project.hasProperty('buildName') ? project.buildName : null
+        suites "src/test/resources/suites/" + testSuite
+//        threadCount=5
+//        parallel="tests"
+    }
+}

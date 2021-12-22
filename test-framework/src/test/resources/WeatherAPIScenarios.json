@@ -1,0 +1,56 @@
+[
+  {
+    "scenarioName": "API - TC001",
+    "scenarioDescription": "This test checks whether passing valid input to the API results in a 200 response",
+    "execution": "ON",
+    "city": "Pune",
+    "passAccessToken": true,
+    "unitMeasurement": "METRIC",
+    "expectedResponse": 200
+  },
+  {
+    "scenarioName": "API - TC002",
+    "scenarioDescription": "This test checks whether passing invalid input to the API results in a 404 response",
+    "execution": "ON",
+    "city": "P",
+    "passAccessToken": true,
+    "unitMeasurement": "METRIC",
+    "expectedResponse": 404
+  },
+  {
+    "scenarioName": "API - TC003",
+    "scenarioDescription": "This test checks whether passing blank token to the API results in a 401 response",
+    "execution": "ON",
+    "city": "Bengaluru",
+    "passAccessToken": false,
+    "unitMeasurement": "METRIC",
+    "expectedResponse": 401
+  },
+  {
+    "scenarioName": "API - TC004",
+    "scenarioDescription": "This test checks whether passing valid input to the API results in a 200 response with unit of measurement as imperial",
+    "execution": "ON",
+    "city": "Bangalore",
+    "passAccessToken": true,
+    "unitMeasurement": "IMPERIAL",
+    "expectedResponse": 200
+  },
+  {
+    "scenarioName": "API - TC005",
+    "scenarioDescription": "This test checks if passing a valid city name along with country code results in a 200 response",
+    "execution": "ON",
+    "city": "London, UK",
+    "passAccessToken": true,
+    "unitMeasurement": "METRIC",
+    "expectedResponse": 200
+  },
+  {
+    "scenarioName": "API - TC006",
+    "scenarioDescription": "This test checks if passing an incorrect combination of country name with country code results in a 404 response",
+    "execution": "ON",
+    "city": "London, IN",
+    "passAccessToken": true,
+    "unitMeasurement": "METRIC",
+    "expectedResponse": 404
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "scenarioName": "TC001",
+    "scenarioDescription": "To check if the response for temperature (In degrees) generated from the UI Matches the API",
+    "execution": "ON",
+    "city": "Pune",
+    "condition": "Temp in Degrees",
+    "variationAllowed": 2
+  },
+  {
+    "scenarioName": "TC002",
+    "scenarioDescription": "To check if the response for temperature (In degrees) generated from the UI Matches the API",
+    "execution": "ON",
+    "city": "Mumbai",
+    "condition": "Temp in Degrees",
+    "variationAllowed": 1
+  },
+  {
+    "scenarioName": "TC003",
+    "scenarioDescription": "To check if the response for temperature (In Fahrenheit) generated from the UI Matches the API",
+    "execution": "ON",
+    "city": "Bengaluru",
+    "condition": "Temp in Fahrenheit",
+    "variationAllowed": 10
+  },
+  {
+    "scenarioName": "TC004",
+    "scenarioDescription": "To check if the response for Humidity generated from the UI Matches the API",
+    "execution": "ON",
+    "city": "Hyderabad",
+    "condition": "Humidity",
+    "variationAllowed": 10
+  },
+  {
+    "scenarioName": "TC005",
+    "scenarioDescription": "To check if the response for Wind speed generated from the UI Matches the API",
+    "execution": "ON",
+    "city": "Mumbai",
+    "condition": "Wind",
+    "variationAllowed": 1
+  }
+]
